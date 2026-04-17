@@ -1,0 +1,121 @@
+<div id="miniSidebar">
+    <div class="brand-logo">
+        <a class="d-none d-md-flex align-items-center gap-2" href="/">
+            <img src="assets/images/brand/logo/logo-icon.svg" alt="" />
+            <span class="fw-bold fs-4 site-logo-text">Dasher</span>
+        </a>
+    </div>
+
+    <ul class="navbar-nav flex-column">
+        <!-- Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <span class="nav-icon"><i class="bi bi-bag"></i></span>
+                <span class="text">Project</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <div class="nav-heading">Pages</div>
+            <hr class="mx-5 nav-line mb-1" />
+        </li>
+
+        <!-- Pages Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <span class="nav-icon"><i class="bi bi-file"></i></span>
+                <span class="text">Pages</span>
+            </a>
+            <ul class="dropdown-menu flex-column">
+                <li><a class="nav-link" href="/pages/error/maintenance">Maintenance</a></li>
+                <li><a class="nav-link" href="/pages/error/404-error">404 Error</a></li>
+            </ul>
+        </li>
+
+        <!-- Auth Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <span class="nav-icon"><i class="bi bi-lock"></i></span>
+                <span class="text">Authentication</span>
+            </a>
+            <ul class="dropdown-menu flex-column">
+                <li><a class="nav-link" href="/auth/sign-in">Sign In</a></li>
+                <li><a class="nav-link" href="/auth/sign-up">Sign Up</a></li>
+                <li><a class="nav-link" href="/auth/forget-password">Forget Password</a></li>
+                <li><a class="nav-link" href="/auth/reset-password">Reset Password</a></li>
+                <li><a class="nav-link" href="/auth/otp-verification">OTP Verification</a></li>
+            </ul>
+        </li>
+
+        <!-- Menu Level Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <span class="nav-icon"><i class="bi bi-menu-app"></i></span>
+                <span class="text">Menu Level</span>
+            </a>
+            <ul class="dropdown-menu flex-column">
+                <li><a class="nav-link" href="#">Level 1a</a></li>
+                <li class="dropdown-submenu">
+                    <a class="nav-link dropdown-toggle" href="#">Level 1b</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="#">Level 2a</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="nav-link dropdown-toggle" href="#">Level 2b</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="#">Level 3a</a></li>
+                                <li><a class="nav-link" href="#">Level 3b</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Disabled -->
+        <li class="nav-item">
+            <a class="nav-link disabled text-gray-400" href="#">
+                <span class="nav-icon"><i class="bi bi-circle"></i></span>
+                <span class="text">Disabled</span>
+            </a>
+        </li>
+
+        <!-- Label with Badge -->
+        <li class="nav-item">
+            <a class="nav-link d-flex gap-2 position-relative align-items-center" href="#">
+                <i class="bi bi-tag"></i>
+                <span class="text">Label</span>
+                <span class="badge bg-info-subtle text-info-emphasis ms-auto">New</span>
+            </a>
+        </li>
+
+        <!-- External Link -->
+        <li class="nav-item">
+            <a class="nav-link" href="#" target="_blank">
+                <span class="nav-icon"><i class="bi bi-box-arrow-up-right"></i></span>
+                <span class="text">External Link</span>
+            </a>
+        </li>
+
+        <!-- Blank Page -->
+        <li class="nav-item">
+            <a class="nav-link" href="/blank">
+                <span class="nav-icon"><i class="bi bi-file-earmark"></i></span>
+                <span class="text">Blank</span>
+            </a>
+        </li>
+
+        <!-- User Profile -->
+        <li>
+            <div class="text-center py-5 upgrade-ui">
+                <div>
+                    <img src="assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle">
+                    <div class="my-3">
+                        <h5 class="mb-1 fs-6">Jitu Chauhan</h5>
+                        <span class="text-secondary">Free Version - 1 Month</span>
+                    </div>
+                    <a href="#" class="btn btn-primary d-none">Buy Pro</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

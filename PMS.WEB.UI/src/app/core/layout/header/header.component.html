@@ -1,0 +1,115 @@
+<!-- Navbar -->
+
+<div id="content">
+    <div class="navbar-glass navbar navbar-expand-lg px-0 px-lg-4">
+        <div class="container-fluid px-lg-0">
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-block d-lg-none">
+                    <a class="text-inherit" data-bs-toggle="offcanvas" href="#offcanvasExample">
+                        <i class="bi bi-list fs-4"></i>
+                    </a>
+                </div>
+
+                <div class="d-none d-lg-block">
+                    <a class="sidebar-toggle d-flex p-3" href="javascript:void(0)">
+                        <i class="bi bi-arrow-bar-left fs-5 text-secondary collapse-mini"></i>
+                        <i class="bi bi-arrow-bar-right fs-5 text-secondary collapse-expanded"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="list-unstyled d-flex align-items-center mb-0 gap-2">
+                <li>
+                    <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                        <small class="ms-1">⌘K</small>
+                    </button>
+                </li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-ghost btn-icon rounded-circle" data-bs-toggle="dropdown">
+                            <i class="bi fs-5" [class.bi-sun]="theme === 'light'"
+                                [class.bi-moon-stars]="theme === 'dark'" [class.bi-circle-half]="theme === 'auto'"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><button class="dropdown-item" (click)="setTheme('light')"><i
+                                        class="bi bi-sun me-2"></i>Light</button></li>
+                            <li><button class="dropdown-item" (click)="setTheme('dark')"><i
+                                        class="bi bi-moon-stars me-2"></i>Dark</button></li>
+                            <li><button class="dropdown-item" (click)="setTheme('auto')"><i
+                                        class="bi bi-circle-half me-2"></i>Auto</button></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="position-relative btn-icon btn-ghost btn rounded-circle" data-bs-toggle="offcanvas"
+                        href="#offcanvasNotification">
+                        <i class="bi bi-bell fs-5"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 ms-n2">2</span>
+                    </a>
+                </li>
+
+                <li class="ms-3 dropdown">
+                    <a href="#" data-bs-toggle="dropdown">
+                        <img src="assets/images/avatar/avatar-1.jpg" alt="User" class="avatar avatar-sm rounded-circle">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end p-0">
+                        <div class="d-flex gap-3 align-items-center border-bottom px-4 py-4">
+                            <img src="assets/images/avatar/avatar-1.jpg" alt="User"
+                                class="avatar avatar-md rounded-circle">
+                            <div>
+                                <h5 class="mb-0 fs-6">Jitu Chauhan</h5>
+                                <small>&#64;imjituchauhan</small>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <a class="dropdown-item" href="#"><i class="bi bi-house-door me-2"></i>Home</a>
+                            <a class="dropdown-item" href="#"><i class="bi bi-inbox me-2"></i>Inbox</a>
+                            <a class="dropdown-item" href="#"><i class="bi bi-chat me-2"></i>Chat</a>
+                            <a class="dropdown-item" href="#"><i class="bi bi-activity me-2"></i>Activity</a>
+                            <a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a>
+                        </div>
+                        <div class="border-top p-3">
+                            <a class="dropdown-item text-danger" (click)="logout()"><i
+                                    class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification">
+        <div class="offcanvas-header">
+            <h5 class="mb-0">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action p-3" *ngFor="let n of notifications">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div>{{ n.title }}</div>
+                            <small class="text-secondary">{{ n.time }}</small>
+                        </div>
+                        <i class="bi bi-circle-fill text-info fs-8"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <input type="search" class="form-control border-0 ps-0" placeholder="Search...">
+                    <button class="btn btn-white btn-sm" data-bs-dismiss="modal">Esc</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
